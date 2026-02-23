@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Cars</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+/* Hero Button */
+.hero-btn{
+    background:#000;
+    color:#fff;
+    padding:10px 25px;
+    border:none;
+    border-radius:5px;
+}
+
+.hero-btn:hover{
+    background:#333;
+}
+
+/* Footer */
+.footer{
+    background:#111;
+    color:#fff;
+    padding:50px 20px 20px;
+}
+
+.footer-box h3{
+    margin-bottom:15px;
+}
+
+.footer-box a{
+    text-decoration:none;
+    color:#ccc;
+}
+
+.footer-box a:hover{
+    color:#fff;
+}
+
+.footer-bottom{
+    border-top:1px solid #333;
+    margin-top:30px;
+    padding-top:15px;
+    text-align:center;
+}
+
+/* Carousel Responsive Height */
+.carousel-item img{
+    height:90vh;
+    object-fit:cover;
+}
+
+@media(max-width:768px){
+    .carousel-item img{
+        height:60vh;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">LuxuryCars</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cars">Cars</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= CAROUSEL ================= -->
+<div id="carouselExample" class="carousel slide mt-5" data-bs-ride="carousel">
+
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" class="d-block w-100">
+      <div class="carousel-caption">
+        <h1>Drive Your Dream</h1>
+        <p>Luxury • Speed • Comfort</p>
+        <button class="hero-btn">Explore Now</button>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="ca.jpg" class="d-block w-100">
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a" class="d-block w-100">
+    </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
+
+<!-- ================= CARS SECTION ================= -->
+<section id="cars" class="container py-5 text-center">
+    <h2 class="mb-4">Our Cars</h2>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow">
+                <img src="https://images.unsplash.com/photo-1549924231-f129b911e442" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">BMW</h5>
+                    <p>Price: ₹50 Lakhs</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Audi</h5>
+                    <p>Price: ₹45 Lakhs</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow">
+                <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Mercedes</h5>
+                    <p>Price: ₹60 Lakhs</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="bg-light py-5">
+  <div class="container text-center">
+    <h2>Contact Us</h2>
+
+    <form class="row g-3 justify-content-center mt-3">
+      <div class="col-md-4">
+        <input type="text" class="form-control" placeholder="Your Name" required>
+      </div>
+      <div class="col-md-4">
+        <input type="email" class="form-control" placeholder="Email" required>
+      </div>
+      <div class="col-8">
+        <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-dark">Send Message</button>
+      </div>
+    </form>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="row text-center text-md-start">
+
+      <div class="col-md-4 footer-box mb-3">
+        <h3>LuxuryCars</h3>
+        <p>Premium luxury cars with best performance & comfort.</p>
+      </div>
+
+      <div class="col-md-4 footer-box mb-3">
+        <h3>Quick Links</h3>
+        <p><a href="#">Home</a></p>
+        <p><a href="#cars">Cars</a></p>
+        <p><a href="#contact">Contact</a></p>
+      </div>
+
+      <div class="col-md-4 footer-box mb-3">
+        <h3>Contact</h3>
+        <p>Email: info@luxurycars.com</p>
+        <p>Phone: +91 9876543210</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 LuxuryCars | All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+ 

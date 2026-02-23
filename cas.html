@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Cars</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+nav{
+    background:#111;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+nav h2{
+    font-size:22px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+}
+
+nav a:hover{
+    color:#ff3c00;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    background:url('https://images.unsplash.com/photo-1493238792000-8113da705763') no-repeat center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:50px;
+    background:rgba(0,0,0,0.6);
+    padding:20px;
+    border-radius:10px;
+}
+
+/* SECTIONS */
+section{
+    padding:80px 30px;
+    text-align:center;
+}
+
+.models{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.card{
+    width:300px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    border-radius:10px;
+    overflow:hidden;
+    transition:0.3s;
+    background:white;
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:15px 0 5px;
+}
+
+.card p{
+    margin-bottom:10px;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+button{
+    padding:10px 20px;
+    background:#111;
+    color:white;
+    border:none;
+    margin:10px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+button:hover{
+    background:#ff3c00;
+}
+
+/* CONTACT */
+form{
+    display:flex;
+    flex-direction:column;
+    max-width:400px;
+    margin:auto;
+    gap:10px;
+}
+
+input, textarea{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    section{
+        padding:60px 20px;
+    }
+
+    .card{
+        width:100%;
+        max-width:350px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<!-- <nav>
+    <h2>LuxuryCars</h2>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <ul id="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Models</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav> -->
+<!-- HERO -->
+<div class="hero" id="home">
+    <h1>Drive Your Dream Car</h1>
+</div>
+
+<!-- MODELS -->
+<section id="models">
+    <h2>Our Models</h2>
+    <div class="models">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+            <h3>Sport X</h3>
+            <p>Starting at ₹25,00,000</p>
+            <button onclick="bookCar('Sport X')">Book Now</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a">
+            <h3>Luxury Z</h3>
+            <p>Starting at ₹40,00,000</p>
+            <button onclick="bookCar('Luxury Z')">Book Now</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Us</h2>
+    <p>We provide premium luxury cars with best performance and comfort.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="submitForm(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 LuxuryCars. All Rights Reserved.</p>
+</footer>
+
+<script>
+function bookCar(carName){
+    alert("You selected: " + carName);
+}
+
+function submitForm(event){
+    event.preventDefault();
+    alert("Thank you! We will contact you soon.");
+}
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Cars</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    scroll-behavior:smooth;
+}
+
+/* Navbar */
+nav{
+    background:#111;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+nav h2{
+    font-size:22px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+/* Hamburger Button */
+.menu-btn{
+    font-size:26px;
+    display:none;
+    cursor:pointer;
+}
+
+/* Hero Section */
+/* .hero{
+    height:100vh;
+    background:url('https://images.unsplash.com/photo-1493238792000-8113da705763') no-repeat center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+    padding-top:70px;
+}
+
+.hero h1{
+    font-size:40px;
+    background:rgba(0,0,0,0.6);
+    padding:20px;
+    border-radius:10px;
+} */
+
+/* Section */
+/* section{
+    padding:80px 20px;
+    text-align:center;
+} */
+
+/* Responsive */
+@media(max-width:768px){
+
+    nav ul{
+        position:absolute;
+        top:60px;
+        left:0;
+        width:100%;
+        background:#111;
+        flex-direction:column;
+        text-align:center;
+        display:none;
+        padding:20px 0;
+    }
+
+    nav ul.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>LuxuryCars</h2>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <ul id="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Models</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="hero">
+    <h1>Drive Your Dream Car</h1>
+</div>
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
